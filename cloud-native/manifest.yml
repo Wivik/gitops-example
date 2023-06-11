@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: devops-map
-        image: ghcr.io/wivik/devops-solutions-map:v0.5.0
+        image: ghcr.io/wivik/devops-solutions-map:v0.6.0
         ports:
         - containerPort: 5000
