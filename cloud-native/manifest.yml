@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-map
+  namespace: devops-map
+  labels:
+    app: devops-map
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: devops-map
+  template:
+    metadata:
+      labels:
+        app: devops-map
+    spec:
+      containers:
+      - name: devops-map
+        image: ghcr.io/wivik/devops-solutions-map:v0.5.0
+        ports:
+        - containerPort: 5000
